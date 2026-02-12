@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up | Online Book Store</title>
+  <link rel="stylesheet" href="./signup.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>Online Book Store</h1>
+</header>
+
+<div class="main-bg-wrapper">
+  <div class="signup-container">
+    <form class="signup-form" id="signupForm" autocomplete="on" novalidate>
+      <h2>Create Account</h2>
+
+      <div class="form-grid">
+        <div class="column">
+          <label for="name">Full Name <span class="required"></span></label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="3" pattern="[A-Za-z ]+" title="Only alphabets and spaces allowed" />
+          <small class="error-msg" id="nameError"></small>
+
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required />
+          <small class="error-msg" id="emailError"></small>
+
+          <label for="password">Password <span class="required">*</span></label>
+          <input type="password" id="password" name="password" placeholder="Minimum 6 characters" required minlength="6" />
+          <small class="error-msg" id="passwordError"></small>
+
+          <label for="confirm">Confirm Password <span class="required">*</span></label>
+          <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" required minlength="6" />
+          <small class="error-msg" id="confirmError"></small>
+        </div>
+
+        <div class="column">
+          <label for="mobile">Mobile Number <span class="required"></span></label>
+          <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" required pattern="^\d{10}$" title="Enter exactly 10 digits" />
+          <small class="error-msg" id="mobileError"></small>
+
+          <label for="city">City <span class="required"></span></label>
+          <input type="text" id="city" name="city" placeholder="Enter your city" required pattern="[A-Za-z ]+" title="Only alphabets and spaces allowed" />
+          <small class="error-msg" id="cityError"></small>
+
+          <label for="dob">Date of Birth <span class="required"></span></label>
+          <input type="date" id="dob" name="dob" required max="2026-01-29" />
+          <small class="error-msg" id="dobError"></small>
+
+          <label>Gender <span class="required"></span></label>
+          <div class="gender-group">
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male" class="radio-label">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required />
+            <label for="female" class="radio-label">Female</label>
+          </div>
+          <small class="error-msg" id="genderError"></small>
+        </div>
+      </div> 
+
+      <div class="full-width">
+        <label for="address">Address <span class="required"></span></label>
+        <textarea id="address" name="address" placeholder="Enter your address (max 5 lines)" rows="3" maxlength="300" required></textarea>
+        <small class="error-msg" id="addressError"></small>
+
+        <label for="hobbies">Hobbies</label>
+        <input type="text" id="hobbies" name="hobbies" placeholder="Enter your hobbies separated by commas" />
+      </div>
+
+      <button type="submit" class="signup-btn">Sign Up Now</button>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2026 Online Book Store | Discover Your Next Favorite Book</p>
+</footer>
+
+<script src="validation/validation.js"></script>
+</body>
+</html>
