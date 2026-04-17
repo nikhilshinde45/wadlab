@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Mobile UI | About</title>
+    
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text: #1e293b;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif !important;
+            background-color: var(--bg) !important;
+            color: var(--text) !important;
+        }
+
+        .ui-page {
+            background: var(--bg) !important;
+        }
+
+        /* Premium Header */
+        .ui-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+            border: none !important;
+            padding: 15px 0 !important;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+        }
+
+        .ui-header .ui-title {
+            font-weight: 700 !important;
+            font-size: 1.4rem !important;
+            color: #ffffff !important;
+            text-shadow: none !important;
+            margin: 0 !important;
+        }
+
+        /* Navbar Styling */
+        .ui-navbar ul {
+            background: white !important;
+        }
+
+        .ui-navbar a {
+            background: white !important;
+            border: none !important;
+            font-weight: 500 !important;
+            color: #64748b !important;
+            transition: all 0.3s ease;
+            text-shadow: none !important;
+            border-bottom: 3px solid transparent !important;
+        }
+
+        .ui-navbar a.ui-btn-active {
+            background: white !important;
+            color: var(--primary) !important;
+            border-bottom: 3px solid var(--primary) !important;
+            box-shadow: none !important;
+        }
+
+        /* Modern Card Layout */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            margin: 25px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        .ui-footer {
+            background: #1e293b !important;
+            border: none !important;
+            padding: 15px 0 !important;
+            color: #94a3b8 !important;
+            text-shadow: none !important;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .ui-footer h4 {
+            font-weight: 400 !important;
+            font-size: 0.9rem !important;
+        }
+    </style>
+
+    <!-- jQuery and jQuery Mobile Scripts -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="about">
+    <div data-role="header">
+        <h1>About</h1>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="index.html" data-transition="slide" data-direction="reverse" data-ajax="false">Home</a></li>
+            <li><a href="about.html" class="ui-btn-active" data-ajax="false">About</a></li>
+            <li><a href="register.html" data-transition="slide" data-ajax="false">Register</a></li>
+        </ul>
+    </div>
+
+    <div role="main" class="ui-content">
+        <div class="card">
+            <h3><span>🚀</span> About This Project</h3>
+            <p>This assignment demonstrates the power of <strong>jQuery Mobile</strong> combined with modern CSS techniques to create a responsive, app-like experience in the browser.</p>
+            <p>We've utilized semantic HTML5, Google Fonts, and a customized design system to elevate the standard framework components into a premium interface.</p>
+            <p>Key features include smooth transitions, glassmorphic card layouts, and a refined navigation system.</p>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h4>Created with &hearts; for Assignment 4A</h4>
+    </div>
+</div>
+
+</body>
+</html>

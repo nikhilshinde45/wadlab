@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful | Modern Mobile UI</title>
+    
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #f8fafc;
+            --success: #10b981;
+            --text: #1e293b;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif !important;
+            background-color: var(--bg) !important;
+            color: var(--text) !important;
+        }
+
+        .ui-page {
+            background: var(--bg) !important;
+        }
+
+        .success-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            margin: 50px 25px;
+            text-align: center;
+            animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: var(--success);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .success-card h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .success-card p {
+            font-size: 1.1rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .home-btn {
+            background: var(--primary) !important;
+            color: white !important;
+            text-shadow: none !important;
+            border: none !important;
+            border-radius: 12px !important;
+            padding: 15px 30px !important;
+            font-weight: 700 !important;
+            display: inline-block !important;
+            text-decoration: none !important;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .home-btn:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-2px);
+        }
+
+        .ui-footer {
+            background: #1e293b !important;
+            border: none !important;
+            padding: 15px 0 !important;
+            color: #94a3b8 !important;
+            text-shadow: none !important;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <!-- jQuery and jQuery Mobile Scripts -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="success">
+    <div role="main" class="ui-content">
+        <div class="success-card">
+            <span class="success-icon">✅</span>
+            <h2>Registration Successful!</h2>
+            <p>Welcome to our community. Your account has been created successfully and you're ready to explore.</p>
+            <a href="index.html" class="ui-btn home-btn" data-ajax="false">Go to Home Page</a>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h4>Created with &hearts; for Assignment 4A</h4>
+    </div>
+</div>
+
+</body>
+</html>

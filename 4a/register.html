@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Mobile UI | Register</title>
+    
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 1);
+            --text: #1e293b;
+            --input-bg: #f1f5f9;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif !important;
+            background-color: var(--bg) !important;
+            color: var(--text) !important;
+        }
+
+        .ui-page {
+            background: var(--bg) !important;
+        }
+
+        /* Premium Header */
+        .ui-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+            border: none !important;
+            padding: 15px 0 !important;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+        }
+
+        .ui-header .ui-title {
+            font-weight: 700 !important;
+            font-size: 1.4rem !important;
+            color: #ffffff !important;
+            text-shadow: none !important;
+            margin: 0 !important;
+        }
+
+        /* Navbar Styling */
+        .ui-navbar ul {
+            background: white !important;
+        }
+
+        .ui-navbar a {
+            background: white !important;
+            border: none !important;
+            font-weight: 500 !important;
+            color: #64748b !important;
+            transition: all 0.3s ease;
+            text-shadow: none !important;
+            border-bottom: 3px solid transparent !important;
+        }
+
+        .ui-navbar a.ui-btn-active {
+            background: white !important;
+            color: var(--primary) !important;
+            border-bottom: 3px solid var(--primary) !important;
+            box-shadow: none !important;
+        }
+
+        /* Form Card */
+        .form-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            margin: 25px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Modern Input Styling */
+        .ui-field-contain {
+            border: none !important;
+            padding: 0 !important;
+            margin: 15px 0 !important;
+        }
+
+        label {
+            font-weight: 600 !important;
+            font-size: 0.9rem !important;
+            color: #475569 !important;
+            margin-bottom: 8px !important;
+            display: block;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"] {
+            background: var(--input-bg) !important;
+            border: 2px solid transparent !important;
+            border-radius: 12px !important;
+            padding: 12px 16px !important;
+            font-family: inherit !important;
+            transition: all 0.3s ease !important;
+            box-shadow: none !important;
+        }
+
+        input[type="text"]:focus, 
+        input[type="email"]:focus, 
+        input[type="password"]:focus {
+            background: #ffffff !important;
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1) !important;
+        }
+
+        /* Custom Button */
+        .submit-btn {
+            background: var(--primary) !important;
+            color: white !important;
+            text-shadow: none !important;
+            border: none !important;
+            border-radius: 12px !important;
+            padding: 15px !important;
+            font-weight: 700 !important;
+            font-size: 1rem !important;
+            margin-top: 25px !important;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4) !important;
+        }
+
+        /* Checkbox & Radio Styles */
+        .ui-checkbox label, .ui-radio label {
+            background: transparent !important;
+            border: none !important;
+            padding-left: 35px !important;
+            font-weight: 500 !important;
+        }
+
+        /* Footer */
+        .ui-footer {
+            background: #1e293b !important;
+            border: none !important;
+            padding: 15px 0 !important;
+            color: #94a3b8 !important;
+            text-shadow: none !important;
+            width: 100%;
+        }
+
+        .ui-footer h4 {
+            font-weight: 400 !important;
+            font-size: 0.9rem !important;
+        }
+    </style>
+
+    <!-- jQuery and jQuery Mobile Scripts -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="register">
+    <div data-role="header">
+        <h1>Register</h1>
+    </div>
+
+    <div data-role="navbar">
+        <ul>
+            <li><a href="index.html" data-transition="slide" data-direction="reverse" data-ajax="false">Home</a></li>
+            <li><a href="about.html" data-transition="slide" data-direction="reverse" data-ajax="false">About</a></li>
+            <li><a href="register.html" class="ui-btn-active" data-ajax="false">Register</a></li>
+        </ul>
+    </div>
+
+    <div role="main" class="ui-content">
+        <div class="form-card">
+            <h3><span>✨</span> Create Account</h3>
+            
+            <form action="success.html" method="get" data-ajax="false">
+                <div class="ui-field-contain">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Choose a unique username">
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="you@example.com">
+                </div>
+
+                <div class="ui-field-contain">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Create a strong password">
+                </div>
+
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup">
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                        <label for="newsletter">Subscribe to Newsletter</label>
+                    </fieldset>
+                </div>
+
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend style="font-weight: 600; color: #475569; font-size: 0.9rem; margin-bottom: 10px;">Gender</legend>
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                    </fieldset>
+                </div>
+
+                <button type="submit" class="ui-btn submit-btn">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h4>Created with &hearts; for Assignment 4A</h4>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User - AdminNova</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="margin: 0; font-size: 1.5rem;">
+            <i class="fa-brands fa-node-js accent-text"></i>
+            <span>Admin<span class="accent-text">Nova</span></span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="users.html" class="nav-link">Users</a>
+            <a href="create.html" class="nav-link active">Create</a>
+        </div>
+    </nav>
+    
+    <div class="container center-container">
+        <div class="glass-panel form-panel">
+            <div class="panel-header">
+                <h2>Create New User</h2>
+                <a href="users.html" class="btn-icon" title="Back to users list">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <form id="create-form">
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" id="phone" placeholder="Phone Number" required>
+                </div>
+
+                <div class="form-actions">
+                    <a href="users.html" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Save New User <i class="fa-solid fa-check"></i></button>
+                </div>
+            </form>
+        </div>
+        <div id="toast-container"></div>
+    </div>
+
+    <script src="script-shared.js"></script>
+    <script>
+        document.getElementById('create-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Saving...';
+            
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            if (!validateEmail(email)) {
+                showToast('Please enter a valid email address.', 'error');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Save New User <i class="fa-solid fa-check"></i>';
+                return;
+            }
+
+            if (!validatePhone(phone)) {
+                showToast('Please enter a valid 10-digit phone number.', 'error');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Save New User <i class="fa-solid fa-check"></i>';
+                return;
+            }
+
+            const userData = {
+                email: email,
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                phone: phone
+            };
+            
+            try {
+                const response = await fetch('/user', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(userData)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showToast('User created successfully. Redirecting...');
+                    setTimeout(() => {
+                        window.location.href = 'users.html';
+                    }, 1500);
+                } else {
+                    showToast(result.message || 'Failed to create user', 'error');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Save New User <i class="fa-solid fa-check"></i>';
+                }
+            } catch (error) {
+                showToast('Network error occurred', 'error');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Save New User <i class="fa-solid fa-check"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
