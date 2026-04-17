@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BookHaven | Discover Your Next Read</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">BookHaven</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Books</a></li>
+        <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<section class="py-5 bg-warning">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-white">
+        <h1 class="fw-bold">Discover Your Next Favorite Book</h1>
+        <p>Browse thousands of books from all genres. Sign up now for exclusive 2026 offers!</p>
+        <a href="signup.html" class="btn btn-dark">Get Started</a>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="book-cover.jpg" class="img-fluid rounded shadow" alt="Books">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="container my-4">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <div class="col-md-3 mb-3">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Categories</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Technology</li>
+            <li class="list-group-item">Fiction</li>
+            <li class="list-group-item">Science</li>
+            <li class="list-group-item">Self Help</li>
+            <li class="list-group-item">Biography</li>
+            <li class="list-group-item">History</li>
+            <li class="list-group-item">Business</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Top Authors</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">J.K. Rowling</li>
+            <li class="list-group-item">Stephen King</li>
+            <li class="list-group-item">Yuval Noah Harari</li>
+            <li class="list-group-item">Malcolm Gladwell</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="col-md-9">
+
+      <h3 class="mb-3">Featured Books</h3>
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">Master HTML, CSS, and JS.</p>
+              <button class="btn btn-warning">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Data Structures</h5>
+              <p class="card-text">Essential logic for devs.</p>
+              <button class="btn btn-warning">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Machine Learning</h5>
+              <p class="card-text">The future of AI starts here.</p>
+              <button class="btn btn-warning">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo -->
+      <div class="alert alert-warning text-center">
+        <h4>Special Offer</h4>
+        <p>Sign up today and get 20% off your first purchase!</p>
+        <a href="signup.html" class="btn btn-dark">Claim Discount</a>
+      </div>
+
+      <!-- FAQ -->
+      <h3 class="mt-4">FAQ</h3>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">
+              How can I buy a book?
+            </button>
+          </h2>
+          <div id="q1" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              Click on the "Buy Now" button and follow the checkout process.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+  <p>© 2026 BookHaven | All Rights Reserved</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
