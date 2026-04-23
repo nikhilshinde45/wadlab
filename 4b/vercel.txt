@@ -1,0 +1,43 @@
+Steps to Deploy Frontend on Vercel
+1. Prepare Your Project
+Make sure your frontend project is ready (HTML/CSS/JS or React/Vite)
+Ensure project runs locally without errors:
+npm run dev
+2. Push Code to GitHub
+Initialize Git (if not done):
+git init
+git add .
+git commit -m "initial commit"
+Create repo on GitHub and push:
+git remote add origin <repo_url>
+git push -u origin main
+3. Login to Vercel
+Go to Vercel
+Sign up / login using GitHub
+4. Import Project
+Click "Add New Project"
+Select your GitHub repository
+Click Import
+5. Configure Project
+Vercel auto-detects framework (React, Vite, etc.)
+If needed, set:
+Build Command:
+npm run build
+Output Directory:
+dist
+
+(For React it may be build)
+
+6. Deploy
+Click Deploy
+Wait for build to complete
+7. Access Live Website
+Vercel provides a URL like:
+https://your-project.vercel.app
+Auto Deployment (Important)
+Every time you push to GitHub:
+git add .
+git commit -m "update"
+git push
+
+➡️ Vercel automatically redeploys your site
