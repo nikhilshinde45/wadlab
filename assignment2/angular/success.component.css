@@ -1,0 +1,107 @@
+/* Success Component Styles */
+.success-page .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-page .success-wrapper {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.success-page .success-icon {
+    font-size: 80px;
+    color: #4caf50;
+    margin-bottom: 20px;
+    animation: scaleIn 0.6s ease-in-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.success-page h2 {
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.success-page .success-message {
+    color: #34495e;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.success-page .success-details {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.success-page .success-details p {
+    color: #2c3e50;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.success-page .success-details strong {
+    color: #34495e;
+    font-weight: bold;
+}
+
+.success-page .success-next-steps {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.success-page .success-next-steps p {
+    color: #2c3e50;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.success-page .success-next-steps ul {
+    list-style-position: inside;
+    color: #34495e;
+    margin: 15px 0;
+}
+
+.success-page .success-next-steps li {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.success-page .btn-home {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.success-page .btn-home:hover {
+    background-color: #2980b9;
+}

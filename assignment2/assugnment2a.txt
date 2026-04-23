@@ -1,0 +1,73 @@
+GitHub Installation Steps & Basic Git Commands
+1. Install Git (Required for GitHub)
+Step 1: Download Git
+Go to: Git official website
+Download Git for your OS (Windows/Linux/Mac)
+Step 2: Install Git
+Run the installer
+Keep default settings (Recommended)
+Click Next → Install → Finish
+Step 3: Verify Installation
+
+Open terminal / command prompt:
+
+git --version
+2. Configure Git (First Time Setup)
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+
+Check configuration:
+
+git config --list
+3. Create GitHub Account
+Go to: GitHub
+Sign up using email
+Verify your account
+4. Create a Repository on GitHub
+Click New Repository
+Enter repository name
+Click Create Repository
+5. Connect Local Project to GitHub
+Initialize Git
+git init
+Add files
+git add .
+Commit files
+git commit -m "First commit"
+Connect to GitHub repo
+git remote add origin <repo_url>
+Push code
+git push -u origin main
+Basic Git Commands (Important)
+1. Clone Repository
+git clone <repo_url>
+2. Check Status
+git status
+3. Add Files
+git add file_name
+git add .
+4. Commit Changes
+git commit -m "message"
+5. Push Changes
+git push
+6. Pull Latest Changes
+git pull
+7. View Commit History
+git log
+8. Create Branch
+git branch branch_name
+9. Switch Branch
+git checkout branch_name
+10. Merge Branch
+git merge branch_name
+Short Workflow (Exam Ready)
+git init
+git add .
+git commit -m "message"
+git remote add origin <url>
+git push -u origin main
+Important Notes
+Git = Version control tool
+GitHub = Online platform to store code
+Always commit before push
+Use meaningful commit messages
